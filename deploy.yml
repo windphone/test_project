@@ -1,0 +1,9 @@
+- hosts: all
+  tasks:
+    - name: Run Nginx Container
+      docker_container:
+        name: nginx
+        image: yourusername/yourimage:latest
+        state: started
+        ports:
+          - "8080:80"
